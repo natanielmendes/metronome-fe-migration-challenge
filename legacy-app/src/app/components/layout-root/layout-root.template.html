@@ -1,0 +1,22 @@
+<div layout="column" flex class="layout-root">
+  <top-bar
+    selected-menu="$ctrl.selectedMenu"
+    last-updated="$ctrl.lastUpdated"
+    maintenance-mode="$ctrl.maintenanceMode"
+    is-loading="$ctrl.isLoading"
+  ></top-bar>
+
+  <div layout="row" flex class="layout-body">
+    <side-menu
+      items="$ctrl.menuItems"
+      selected="$ctrl.selectedMenu"
+      on-select="$ctrl.handleMenuSelect(menuKey)"
+    ></side-menu>
+
+    <md-content flex layout="column" class="layout-content">
+      <md-progress-linear class="md-primary" md-mode="indeterminate" ng-if="$ctrl.isLoading"></md-progress-linear>
+
+      <ui-view class="screen-container" layout="column" flex></ui-view>
+    </md-content>
+  </div>
+</div>

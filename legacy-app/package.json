@@ -1,0 +1,33 @@
+{
+    "name": "legacy-angularjs-app",
+    "version": "0.1.0",
+    "private": true,
+    "description": "Legacy AngularJS 1.x demo shell with shared state and Angular Material for migration exercises.",
+    "scripts": {
+        "start": "webpack serve --config webpack.config.js --env development --open",
+        "build": "webpack --config webpack.config.js --env production"
+    },
+    "dependencies": {
+        "@uirouter/angularjs": "^1.0.31",
+        "angular": "^1.8.3",
+        "angular-animate": "^1.8.3",
+        "angular-aria": "^1.8.3",
+        "angular-material": "^1.2.5",
+        "angular-messages": "^1.8.3",
+        "ng-redux": "^4.1.0",
+        "redux": "^4.2.1",
+        "redux-thunk": "^2.4.2"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.24.7",
+        "@babel/preset-env": "^7.24.7",
+        "babel-loader": "^9.1.3",
+        "css-loader": "^6.9.1",
+        "html-loader": "^4.2.0",
+        "html-webpack-plugin": "^5.6.0",
+        "style-loader": "^3.3.4",
+        "webpack": "^5.91.0",
+        "webpack-cli": "^5.1.4",
+        "webpack-dev-server": "^4.15.2"
+    }
+}
