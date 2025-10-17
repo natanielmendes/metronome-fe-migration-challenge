@@ -1,0 +1,63 @@
+.sideMenu {
+  width: 240px;
+  background: var(--app-white);
+  border-right: 1px solid var(--app-border);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.header {
+  padding: 16px;
+  border-bottom: 1px solid var(--app-border);
+  background: var(--app-primary);
+  color: white;
+}
+
+.headerTitle {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.menuList {
+  list-style: none;
+  padding: 8px;
+  margin: 0;
+}
+
+.menuItem {
+  margin-bottom: 4px;
+}
+
+.menuButton {
+  width: 100%;
+  padding: 12px 16px;
+  border: none;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--app-text);
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+}
+
+.menuButton:hover {
+  background: var(--app-surface);
+}
+
+.menuButton.active {
+  background: var(--app-primary);
+  color: white;
+}
+
+.menuButton.active:hover {
+  background: var(--app-primary-dark);
+}
+
+
+
