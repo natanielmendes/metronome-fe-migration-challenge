@@ -9,19 +9,35 @@
     </md-card-title-media>
   </md-card-title>
   <md-card-content>
-    <div layout="row" layout-align="space-around center">
-      <div layout="column" layout-align="center center">
+    <div layout="row" layout-align="space-around center" layout-wrap>
+      <!-- AngularJS Implementation -->
+      <div layout="column" layout-align="center center" style="padding: 16px;">
         <span class="md-title">{{$ctrl.wins}}</span>
-        <span class="md-caption">Wins logged</span>
-        <md-button class="md-primary" ng-click="$ctrl.increment()">Add win</md-button>
+        <span class="md-caption">Wins (AngularJS)</span>
+        <md-button class="md-primary" ng-click="$ctrl.increment()">Add win (AngularJS)</md-button>
       </div>
-      <div layout="column" layout-align="center center">
+
+      <!-- React Widget (Exercise 1) -->
+      <div id="react-wins-widget" style="padding: 16px;"></div>
+
+      <!-- Open Incidents (AngularJS) -->
+      <div layout="column" layout-align="center center" style="padding: 16px;">
+        <md-icon class="md-48" style="color: #f44336;">warning</md-icon>
         <span class="md-title">{{$ctrl.openIncidentCount}}</span>
         <span class="md-caption">Open incidents</span>
         <blockquote class="screen-note" ng-if="$ctrl.maintenanceMode">
           <strong>Heads up:</strong> Metrics are read-only while maintenance mode is enabled.
         </blockquote>
       </div>
+    </div>
+    
+    <md-divider></md-divider>
+    
+    <div style="padding: 16px; background: #f5f5f5; margin-top: 16px; border-radius: 4px;">
+      <p style="margin: 0; font-size: 14px; color: #666;">
+        <strong>Exercise 1 Demo:</strong> This page shows AngularJS and React side-by-side, both connected to the same Redux store.
+        Try clicking either "Add win" button - both counters update because they share state! In a real-world scenarios, we would replace the AngularJS component with the React component.
+      </p>
     </div>
   </md-card-content>
 </md-card>

@@ -1,0 +1,136 @@
+/* Full React Screen Styles - Matching react-app design exactly */
+
+:root {
+  --app-primary: #3949ab;
+  --app-primary-dark: #1a237e;
+  --app-accent: #ffb300;
+  --app-surface: #f5f7fb;
+  --app-border: #d0d7e2;
+  --app-text: #1b2733;
+  --app-text-secondary: #5a6872;
+  --app-white: #ffffff;
+  --app-shadow: 0 12px 24px rgba(29, 41, 57, 0.08);
+  --app-shadow-sm: 0 2px 8px rgba(29, 41, 57, 0.06);
+}
+
+/* Card Styles */
+.card {
+  background: var(--app-white);
+  border-radius: 8px;
+  box-shadow: var(--app-shadow);
+  padding: 24px;
+  margin-bottom: 24px;
+  max-width: 960px;
+}
+
+.card-title {
+  font-size: 24px;
+  font-weight: 500;
+  margin: 0 0 8px 0;
+  color: var(--app-text);
+}
+
+.card-subtitle {
+  font-size: 14px;
+  color: var(--app-text-secondary);
+  margin: 0 0 24px 0;
+}
+
+/* Stat Display */
+.stat-group {
+  display: flex;
+  gap: 48px;
+  justify-content: space-around;
+  margin: 16px 0;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.stat-value {
+  font-size: 32px;
+  font-weight: 500;
+  color: var(--app-primary);
+  margin-bottom: 8px;
+}
+
+.stat-label {
+  font-size: 14px;
+  color: var(--app-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Button Styles */
+.btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background: var(--app-primary);
+  color: white;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: var(--app-primary-dark);
+  transform: translateY(-1px);
+  box-shadow: var(--app-shadow-sm);
+}
+
+/* Note/Alert Box */
+.note {
+  padding: 16px;
+  border-left: 4px solid var(--app-primary);
+  background: #e8eaf6;
+  border-radius: 4px;
+  margin: 16px 0;
+}
+
+.note strong {
+  color: var(--app-primary);
+}
+
+/* Utility Classes */
+.flex {
+  display: flex;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+
+.mb-16 {
+  margin-bottom: 16px;
+}
+
+.mt-16 {
+  margin-top: 16px;
+}
+

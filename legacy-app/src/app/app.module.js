@@ -15,6 +15,7 @@ import { TeamComponent } from './screens/team/team.component';
 import { SettingsComponent } from './screens/settings/settings.component';
 import { ApiClient } from './services/api-client';
 import { StateBootstrapService } from './services/state-bootstrap.service';
+import { ReactWidgetBridgeService } from './services/react-widget-bridge.service';
 import { rootReducer } from './store';
 
 angular
@@ -28,6 +29,7 @@ angular
   .component('settingsScreen', SettingsComponent)
   .service('ApiClient', ApiClient)
   .service('StateBootstrapService', StateBootstrapService)
+  .service('ReactWidgetBridgeService', ReactWidgetBridgeService)
   .config([
     '$ngReduxProvider',
     '$mdThemingProvider',
@@ -50,6 +52,21 @@ angular
         .state('metrics', {
           url: '/metrics',
           component: 'metricsScreen'
+        })
+        .state('metrics-react', {
+          url: '/metrics-react',
+          template: '<div id="react-full-screen" style="min-height: 500px;"></div>',
+          onEnter: ['ReactWidgetBridgeService', async (ReactWidgetBridgeService) => {
+            // Dynamically import the React screen component
+            const { default: MetricsReact } = await import('./screens/react-screens/MetricsReact.jsx');
+            // Small delay to ensure DOM is ready
+            setTimeout(() => {
+              ReactWidgetBridgeService.mount('#react-full-screen', MetricsReact);
+            }, 10);
+          }],
+          onExit: ['ReactWidgetBridgeService', (ReactWidgetBridgeService) => {
+            ReactWidgetBridgeService.unmount('#react-full-screen');
+          }]
         })
         .state('team', {
           url: '/team',

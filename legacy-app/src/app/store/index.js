@@ -13,6 +13,7 @@ export const UPDATE_TEAM_MOOD = 'workspace/updateTeamMood';
 export const menuItems = [
   { key: 'overview', label: 'Overview', description: 'Executive summary and shared notes.' },
   { key: 'metrics', label: 'Metrics', description: 'Leading metrics and progress indicators.' },
+  { key: 'metrics-react', label: 'Metrics (React)', description: 'Full React screen - Exercise 2 demo.' },
   { key: 'team', label: 'Team', description: 'Collaboration status and open blockers.' },
   { key: 'settings', label: 'Settings', description: 'Operational toggles and migration helpers.' }
 ];
