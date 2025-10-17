@@ -106,7 +106,15 @@ Before sending your repository link, please ensure:
 
 ---
 
-✅ **That’s it!**  
-We appreciate the time you’ll invest in this challenge and look forward to reviewing your approach.
+✅ **That's it!**  
+We appreciate the time you'll invest in this challenge and look forward to reviewing your approach.
+
+---
+
+## 📁 README.md for each project
+
+**Legacy App** (`/legacy-app`): The end of legacy-app/README.md now describes the three completed migration exercises: (1) a React counter widget embedded in the AngularJS Metrics screen with shared Redux store connectivity, (2) a complete React implementation of the Metrics screen as a new route (`/metrics-react`) showing full screen migration, and (3) style isolation techniques using CSS namespacing to prevent conflicts between Angular Material and React components. All exercises demonstrate real-time state synchronization across both frameworks.
+
+**React App** (`/react-app`): The react-app/README.md specifies the React 18 + TypeScript application with Vite as the build tool. It documents the tech stack (Redux Toolkit for state management, React Router for routing, CSS Modules for styling), four feature screens (Overview, Metrics, Team, Settings), and the project structure showing clear separation between components, screens, store, and services layers.
 
 ---
